@@ -6,6 +6,7 @@
 > - Memahami kapan `super()` dipanggil
 > - Memahami kapan attribute dibuat
 > - Melatih cara berpikir saat debugging
+> - Persiapan memahami Page Object Model (Playwright)
 
 ---
 
@@ -156,23 +157,179 @@ Apakah constructor parent pernah dijalankan?
 
 ---
 
+# 🟣 Challenge 4 - Flow Constructor (Playwright)
+
+Perhatikan kode berikut.
+
+```python
+class BasePage:
+
+    def __init__(self, page):
+        self.page = page
+
+
+class LoginPage(BasePage):
+
+    def __init__(self, page):
+        super().__init__(page)
+
+    def login(self):
+        print("Login")
+
+
+login_page = LoginPage(page)
+```
+
+## Pertanyaan
+
+Urutkan proses berikut.
+
+```
+A. self.page dibuat
+
+B. BasePage.__init__()
+
+C. LoginPage.__init__()
+
+D. login_page berhasil dibuat
+```
+
+### ✍️ Jawaban
+
+```
+...
+```
+
+---
+
+## Pertanyaan Tambahan
+
+Jawab menggunakan bahasamu sendiri.
+
+1. Kapan `self.page` dibuat?
+2. Kenapa method `login()` bisa menggunakan `self.page`, padahal `self.page` tidak ada di class `LoginPage`?
+
+---
+
+### 💡 Clue
+
+Ingat...
+
+```python
+super().__init__(page)
+```
+
+hanya **memanggil constructor parent**.
+
+Yang membuat:
+
+```python
+self.page
+```
+
+adalah siapa?
+
+---
+
+# 🟠 Challenge 5 - Debugging (Playwright)
+
+Perhatikan kode berikut.
+
+```python
+class BasePage:
+
+    def __init__(self, page):
+        self.page = page
+
+
+class LoginPage(BasePage):
+
+    def __init__(self, page):
+        pass
+
+    def login(self):
+        self.page.goto("https://example.com")
+
+
+login_page = LoginPage(page)
+login_page.login()
+```
+
+## Pertanyaan
+
+1. Error apa yang kemungkinan muncul?
+2. Kenapa error tersebut bisa terjadi?
+3. Bagaimana cara memperbaikinya?
+
+---
+
+### 💡 Clue
+
+Method berikut membutuhkan:
+
+```python
+self.page
+```
+
+Siapa yang membuat `self.page`?
+
+Apakah constructor parent pernah dijalankan?
+
+---
+
+## 🚀 Bonus Challenge - Flow Program
+
+Tanpa menjalankan program.
+
+Lengkapi alur berikut.
+
+```
+LoginPage(page)
+        │
+        ▼
+?
+        │
+        ▼
+?
+        │
+        ▼
+?
+        │
+        ▼
+self.page dibuat
+        │
+        ▼
+?
+        │
+        ▼
+login() bisa menggunakan self.page
+```
+
+Isi semua tanda `?`.
+
+---
+
 # 🎯 Checklist
 
 - [ ] Paham constructor dijalankan dari mana.
 - [ ] Paham kapan `super()` dipanggil.
 - [ ] Paham kapan attribute dibuat.
 - [ ] Paham alur program dari child → parent → child.
-- [ ] Bisa menebak penyebab error tanpa menjalankan program.
+- [ ] Bisa membaca flow program tanpa menjalankannya.
+- [ ] Bisa menebak penyebab error sebelum debugging.
+- [ ] Mulai memahami konsep BasePage & LoginPage di Playwright.
 
 ---
 
 # 🚀 Goal
 
-Kalau bisa menyelesaikan 3 challenge ini tanpa melihat internet, berarti kamu sudah mulai terbiasa membaca **flow program**, bukan hanya menghafal sintaks.
+Kalau bisa menyelesaikan semua challenge ini tanpa melihat internet, berarti kamu sudah mulai terbiasa membaca **flow program**, bukan hanya menghafal sintaks.
 
 Kemampuan ini akan sangat membantu saat belajar:
 
-- Playwright
+- Python OOP
 - Pytest
+- Playwright
 - Page Object Model (POM)
-- Debugging automation test
+- Debugging Automation Test
+- Membangun framework automation yang rapi
