@@ -30,7 +30,13 @@ mobil = Mobil(
 
 # Penjelasan:
 # 1. Mobil.__init__() dijalankan.
-# 2. super().__init__() memanggil constructor parent.
-# 3. Product.__init__() membuat self.name dan self.price.
-# 4. Setelah parent selesai, kembali ke Mobil.__init__().
-# 5. self.brand dibuat.
+#         ↓
+# 2. super().__init__() dipanggil.
+#         ↓
+# 3. Product.__init__() dijalankan.
+#         ↓
+# 4. self.name & self.price dibuat.
+#         ↓
+# 5. Kembali ke Mobil.__init__().
+#         ↓
+# 6. self.brand dibuat.
