@@ -13,3 +13,7 @@ dev = [
 
 [tool.uv.sources]
 pytest = { workspace = true }
+
+[tool.pytest.ini_options]
+python_files = ["test_*.py", "*_test.py", "challenge_*.py"]
+
