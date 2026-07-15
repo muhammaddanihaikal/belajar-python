@@ -1,12 +1,11 @@
 {
   "files.exclude": {
     "**/__pycache__": true,
-    "**/__init__.py": true
+    "**/__init__.py": true,
+    "**/.pytest_cache": true
   },
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
-  "python.testing.pytestArgs": [
-    "pytest/1-pytest-dasar"
-  ],
+  "python.testing.pytestArgs": ["pytest/1-pytest-dasar"],
   "testing.codeLenses": true
 }
