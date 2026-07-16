@@ -112,17 +112,27 @@ Jawab menggunakan bahasamu sendiri.
 ### ✍️ Jawaban
 
 ```text
-...
+# Jawaban :
+
+# 1. Fungsi utama conftest.py adalah sebagai tempat menyimpan
+# fixture agar dapat digunakan oleh banyak file test
+# tanpa perlu di-import.
+
+# 2. Karena fixture hanya digunakan oleh test,
+# sehingga lebih rapi jika disimpan di dalam folder tests.
+# Selain itu, pytest memang mencari conftest.py mulai dari
+# folder tempat file test berada, lalu naik ke parent directory
+# hingga root project.
 ```
 
 ---
 
 # 🎯 Checklist
 
-- [ ] Paham fungsi `conftest.py`.
-- [ ] Paham kenapa fixture tidak perlu di-import.
-- [ ] Paham bagaimana pytest mencari fixture.
-- [ ] Paham alasan `conftest.py` biasanya diletakkan di folder `tests/`.
+- [x] Paham fungsi `conftest.py`.
+- [x] Paham kenapa fixture tidak perlu di-import.
+- [x] Paham bagaimana pytest mencari fixture.
+- [x] Paham alasan `conftest.py` biasanya diletakkan di folder `tests/`.
 
 ---
 
