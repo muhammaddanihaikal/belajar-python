@@ -145,11 +145,11 @@ Jawab menggunakan bahasamu sendiri.
 
 # 🎯 Checklist
 
-- [ ] Paham fungsi `@pytest.mark.parametrize`.
-- [ ] Paham flow eksekusi `parametrize`.
-- [ ] Paham kenapa `parametrize` ditulis di atas function test.
-- [ ] Paham bahwa setiap tuple mewakili satu skenario test.
-- [ ] Paham bahwa yang biasanya dibuat reusable adalah data, bukan `parametrize`-nya.
+- [x] Paham fungsi `@pytest.mark.parametrize`.
+- [x] Paham flow eksekusi `parametrize`.
+- [x] Paham kenapa `parametrize` ditulis di atas function test.
+- [x] Paham bahwa setiap tuple mewakili satu skenario test.
+- [x] Paham bahwa yang biasanya dibuat reusable adalah data, bukan `parametrize`-nya.
 
 ---
 
