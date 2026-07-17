@@ -13,8 +13,8 @@ def test_login():
 def test_checkout():
     pass
 
-@pytest.mark.smoke
 @pytest.mark.ui
+@pytest.mark.smoke
 def test_profile():
     pass
 ```
@@ -35,7 +35,7 @@ def test_profile():
 
 ---
 
-# Challenge 2 - Memilih Test
+# Challenge 2 - Menjalankan Marker
 
 ```python
 import pytest
@@ -99,6 +99,58 @@ Jawab menggunakan bahasamu sendiri.
 3. Kenapa satu test boleh memiliki lebih dari satu marker?
 4. Kenapa `@pytest.mark.smoke.ui` tidak bisa digunakan?
 5. Apa fungsi operator `and`, `or`, dan `not` pada `-m`?
+
+---
+
+## ✍️ Jawaban
+
+```text
+
+```
+
+---
+
+# Challenge 4 - Register Custom Marker
+
+Perhatikan kode berikut.
+
+```python
+import pytest
+
+@pytest.mark.smoke
+def test_login():
+    pass
+```
+
+Saat menjalankan test muncul warning:
+
+```text
+PytestUnknownMarkWarning
+```
+
+### Pertanyaan
+
+1. Kenapa warning tersebut muncul?
+2. Apakah test tetap dijalankan?
+3. Bagaimana cara menghilangkan warning tersebut?
+
+---
+
+## ✍️ Jawaban
+
+```text
+
+```
+
+---
+
+# Challenge 5 - Pemahaman Register Marker
+
+Jawab menggunakan bahasamu sendiri.
+
+1. Kenapa marker buatan sendiri sebaiknya diregister?
+2. Marker apa saja yang tidak perlu diregister?
+3. Apa manfaat register marker bagi sebuah project?
 
 ---
 
