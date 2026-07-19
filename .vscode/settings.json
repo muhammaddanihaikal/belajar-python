@@ -7,5 +7,6 @@
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
   "python.testing.pytestArgs": ["pytest/1-pytest-dasar"],
-  "testing.codeLenses": true
+  "testing.codeLenses": true,
+  "python-envs.defaultEnvManager": "ms-python.python:system"
 }
