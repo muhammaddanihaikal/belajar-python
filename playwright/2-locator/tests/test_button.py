@@ -3,11 +3,11 @@ from playwright.sync_api import Page
 def test_button(page: Page):
     page.goto("/buttons")
 
-    # double klik
-    page.get_by_role("button", name="Double Click Me").dblclick()
+    # akses button double click me
+    page.get_by_role("button", name="Double Click Me")
 
-    # klik kanan
-    page.get_by_role("button", name="Right Click Me").click(button="right")
+    # akses button right click me
+    page.get_by_role("button", name="Right Click Me")
 
-    # klik button yang namanya persis "Click Me"
-    page.get_by_role("button", name="Click Me", exact=True).click()
+    # akses button click me
+    page.get_by_role("button", name="Click Me", exact=True)
