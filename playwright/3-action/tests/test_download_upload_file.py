@@ -5,9 +5,9 @@ BASE_DIR = Path(__file__).parent.parent.parent
 print("base dir : ",BASE_DIR)
 # catatan :
 # __file__ = lokasi file Python saat ini
-# .parent = cd ..        -> tests/
-# .parent.parent = cd ../..      -> 3-action/
-# .parent.parent.parent = cd ../../.. -> playwright/
+# .parent = cd .. -> (tests/)
+# .parent.parent = cd ../.. -> (3-action/)
+# .parent.parent.parent = cd ../../.. -> (playwright/)
 
 test_file_pdf = BASE_DIR / "test-file" / "file pdf test.pdf"
 print("test file pdf : ", test_file_pdf)
